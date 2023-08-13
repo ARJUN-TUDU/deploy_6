@@ -29,6 +29,14 @@ app.get("/",async(req,res)=>{
 
 });
 
+app.post("/inserting",async (req,res)=>{
+    
+    const doc = new User(req.body);
+    await doc.save();
+
+
+})
+
 const connectDb = async()=>{
 
     try{
