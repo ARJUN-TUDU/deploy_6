@@ -21,16 +21,11 @@ const User =  mongoose.model("employees",userSchema);
 
 app.get("/",async(req,res)=>{
      
-    try{
 
         const data = await User.find();
         return res.json(data).status(200);
 
-    }catch(err){
-
-        res.status(400);
-
-    }
+    
 
 });
 
