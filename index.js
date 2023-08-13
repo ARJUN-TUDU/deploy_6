@@ -24,7 +24,7 @@ app.get("/",async(req,res)=>{
     try{
 
         const data = await User.find();
-        res.json(data).status(200);
+        return res.json(data).status(200);
 
     }catch(err){
 
